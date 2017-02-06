@@ -1080,9 +1080,11 @@ fun! s:set_highlightings_variable()
   let g:PaperColor_Python_Highlight_Builtins =
         \ get(g:, 'PaperColor_Python_Highlight_Builtins', 0)
   if g:PaperColor_Python_Highlight_Builtins ==# 0
-    let s:python_builtin_color = s:foreground
+    let s:python_color_builtin_func = s:foreground
+    let s:python_color_builtin_obj = s:foreground
   else
-    let s:python_builtin_color = s:green
+    let s:python_color_builtin_func = s:wine
+    let s:python_color_builtin_obj = s:green
   endif
   call s:HL("pythonImport", s:pink, "", s:bold)
   call s:HL("pythonExceptions", s:red, "", "")
@@ -1095,7 +1097,7 @@ fun! s:set_highlightings_variable()
   call s:HL("pythonPreCondit", s:purple, "", "")
   call s:HL("pythonExClass", s:orange, "", "")
   call s:HL("pythonOperator", s:purple, "", s:bold)
-  call s:HL("pythonBuiltin", s:python_builtin_color, "", "")
+  call s:HL("pythonBuiltin", s:foreground, "", "")
   call s:HL("pythonDecorator", s:orange, "", "")
 
   call s:HL("pythonString", s:olive, "", "")
@@ -1107,8 +1109,8 @@ fun! s:set_highlightings_variable()
   call s:HL("pythonBytesEscape", s:olive, "", s:bold)
   call s:HL("pythonDottedName", s:purple, "", "")
   call s:HL("pythonStrFormat", s:foreground, "", "")
-  call s:HL("pythonBuiltinFunc", s:python_builtin_color, "", "")
-  call s:HL("pythonBuiltinObj", s:python_builtin_color, "", "")
+  call s:HL("pythonBuiltinFunc", s:python_color_builtin_func, "", "")
+  call s:HL("pythonBuiltinObj", s:python_color_builtin_obj, "", "")
 
   " Java Highlighting
   call s:HL("javaExternal", s:pink, "", "")
