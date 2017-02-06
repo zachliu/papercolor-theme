@@ -1077,8 +1077,9 @@ fun! s:set_highlightings_variable()
   call s:HL("rstInterpretedTextOrHyperlinkReference", s:blue, "", "")
 
   " Python Highlighting
-  let g:PaperColor_Python_Highlight_Builtins = get(g:, 'PaperColor_Python_Highlight_Builtins', 0)
-  if (g:PaperColor_Python_Builtins ==# 0)
+  let g:PaperColor_Python_Highlight_Builtins =
+        \ get(g:, 'PaperColor_Python_Highlight_Builtins', 0)
+  if g:PaperColor_Python_Highlight_Builtins ==# 0
     let s:python_builtin_color = s:green
   else
     let s:python_builtin_color = s:foreground
