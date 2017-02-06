@@ -1106,7 +1106,7 @@ fun! s:set_highlightings_variable()
   call s:HL("pythonExClass", s:red, "", "")
   call s:HL("pythonBytesEscape", s:olive, "", s:bold)
   call s:HL("pythonDottedName", s:purple, "", "")
-  call s:HL("pythonStrFormat", s:python_builtin_color, "", "")
+  call s:HL("pythonStrFormat", s:foreground, "", "")
   call s:HL("pythonBuiltinFunc", s:python_builtin_color, "", "")
   call s:HL("pythonBuiltinObj", s:python_builtin_color, "", "")
 
