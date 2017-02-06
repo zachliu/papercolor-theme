@@ -1080,9 +1080,9 @@ fun! s:set_highlightings_variable()
   let g:PaperColor_Python_Highlight_Builtins =
         \ get(g:, 'PaperColor_Python_Highlight_Builtins', 0)
   if g:PaperColor_Python_Highlight_Builtins ==# 0
-    let s:python_builtin_color = s:green
-  else
     let s:python_builtin_color = s:foreground
+  else
+    let s:python_builtin_color = s:green
   endif
   call s:HL("pythonImport", s:pink, "", s:bold)
   call s:HL("pythonExceptions", s:red, "", "")
