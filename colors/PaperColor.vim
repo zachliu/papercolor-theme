@@ -1083,8 +1083,8 @@ fun! s:set_highlightings_variable()
     let s:python_color_builtin_func = s:foreground
     let s:python_color_builtin_obj = s:foreground
   else
-    let s:python_color_builtin_func = s:blue
-    let s:python_color_builtin_obj = s:green
+    let s:python_color_builtin_func = s:green
+    let s:python_color_builtin_obj = s:blue
   endif
   call s:HL("pythonImport", s:pink, "", s:bold)
   call s:HL("pythonExceptions", s:red, "", "")
